@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "webpack --mode=development && eleventy --serve",
     "build": "webpack --mode=production && eleventy"
   },
   "author": "",
