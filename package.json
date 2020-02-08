@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "A minimal example of how to use Webpack with Eleventy",
   "scripts": {
-    "dev:webpack": "webpack --mode development --watch",
-    "prod:webpack": "webpack --mode production",
-    "dev:eleventy": "eleventy --serve",
-    "prod:eleventy": "eleventy",
-    "serve": "run-p dev:*",
-    "build": "run-p prod:*"
+    "serve:webpack": "webpack --mode development --watch",
+    "build:webpack": "webpack --mode production",
+    "serve:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "serve": "run-p serve:*",
+    "build": "run-p build:*"
   },
   "author": "Derrick Reimer",
   "license": "MIT",
