@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "A minimal example of how to use Webpack with Eleventy",
   "scripts": {
+    "clean": "rimraf _site",
     "serve:webpack": "webpack --mode development --watch",
+    "serve:eleventy": "ELEVENTY_ENV=development eleventy --serve",
+    "serve": "npm-run-all clean --parallel serve:*",
     "build:webpack": "webpack --mode production",
-    "serve:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
-    "serve": "run-p serve:*",
-    "build": "run-p build:*"
+    "build:eleventy": "ELEVENTY_ENV=production eleventy",
+    "build": "npm-run-all clean --parallel build:*"
   },
   "author": "Derrick Reimer",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "@11ty/eleventy": "^0.10.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
+    "rimraf": "^3.0.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
