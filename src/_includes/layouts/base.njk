@@ -5,6 +5,6 @@
   </head>
   <body>
     {{ content | safe }}
-    <script src="/assets/main.js"></script>
+    <script src="{{ "main.js" | assetPath }}"></script>
   </body>
 </html>
